@@ -1,0 +1,49 @@
+
+.empty-cart {
+  text-align: center;
+  margin-top: 100px;
+  color: white;
+}
+
+.empty-cart h3 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.empty-cart p {
+  color: #cfcfcf;
+  font-size: 1.1rem;
+}
+
+.cart-title {
+  color: #f28c28;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+body{
+    color:#f28c28;
+}
+
+.list-group-item {
+  background-color: #1a1a1a !important;
+  color: white !important;
+  border: 1px solid #333 !important;
+  border-radius: 10px !important;
+  margin-bottom: 15px;
+}
+
+.list-group-item a {
+  color: white;
+  text-decoration: none;
+}
+
+.list-group-item a:hover {
+  color: #f28c28;
+}
+
+.list-group-item img {
+  border-radius: 10px;
+}

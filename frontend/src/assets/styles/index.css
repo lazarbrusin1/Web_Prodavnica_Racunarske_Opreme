@@ -1,0 +1,164 @@
+main {
+  min-height: 80vh;
+  user-select: none;
+}
+
+.rating span {
+  margin: 0.1rem;
+}
+
+.rating svg {
+  color: #f3f3f3;
+}
+
+.rating-text {
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding-left: 0.5rem;
+  color: white;
+}
+
+.product-title {
+  height: 2.5em; /* Set a fixed height */
+  overflow: hidden; /* Hide overflow content */
+  text-overflow: ellipsis; /* Add ellipsis for long text */
+  white-space: nowrap; /* Prevent wrapping */
+
+  font-size: 1.1rem;
+  color: #f8f8f8;
+  text-decoration: none;
+}
+
+table td,
+table th {
+  text-align: center;
+}
+
+.review {
+  margin-top: 30px;
+}
+
+.review h2 {
+  font-size: 24px;
+  background-color: white;
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+.review button {
+  margin-top: 10px;
+}
+
+.carousel-caption {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.add-to-cart-btn {
+  background-color: #30848e;
+  border-color: #30848e;
+  color: white;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #256a72;
+  border-color: #256a72;
+  color: white;
+}
+
+.add-to-cart-btn:disabled {
+  background-color: #9aaeb1;
+  border-color: #8eb2b8;
+}
+
+body {
+  background-color: white;
+}
+
+.custom-navbar {
+  background-color: #f28c28 !important;
+}
+
+footer {
+  background-color: #f28c28;
+  color: white;
+}
+
+main {
+  background-color: #2b2b2b;
+}
+.navbar-brand {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+.custom-navbar {
+  background-color: #f28c28 !important;
+  min-height: 190px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.store-title {
+font-family: 'Trebuchet MS', sans-serif;
+  font-size: 3rem;
+  font-weight: bold;
+  color: white;
+  letter-spacing: 1px;
+}
+
+.products-title {
+  color: #f28c28;
+  font-weight: bold;
+  text-align: center;
+}
+
+.card {
+  background-color: #1a1a1a !important;
+  color: white;
+  border: 1px solid #333;
+}
+.card-text {
+  color: white;
+}
+
+.card {
+  background-color: #1a1a1a !important;
+  color: white;
+  border: 1px solid #333;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 20px rgba(242, 140, 40, 0.5);
+}
+
+.card img {
+  transition: transform 0.3s ease;
+}
+
+.card:hover img {
+  transform: scale(1.05);
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 1.2rem;
+font-weight: bold;
+}
+
+.main-container {
+  max-width: 1400px;
+}
+
+.loyalty-price {
+  color: #d4f228;
+  font-weight: bold;
+}

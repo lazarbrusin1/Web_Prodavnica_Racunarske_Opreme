@@ -1,0 +1,27 @@
+.modal-content {
+  background-color: #1f1f1f !important;
+  color: white;
+  border-radius: 15px;
+}
+
+.modal input {
+  background-color: #2b2b2b;
+  border: 1px solid #444;
+  color: white !important;
+}
+
+.modal input:focus {
+  background-color: #2b2b2b;
+  color: white;
+  border-color: #f28c28;
+  box-shadow: none;
+}
+
+.modal h3 {
+  color: #f28c28;
+  font-weight: bold;
+}
+
+.modal input::placeholder {
+  color: white !important;
+}
