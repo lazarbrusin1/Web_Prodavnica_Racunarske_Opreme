@@ -25,3 +25,28 @@
 .modal input::placeholder {
   color: white !important;
 }
+
+.toast-custom-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 2000;
+}
+
+.toast-custom {
+  min-width: 280px;
+  background: rgba(33, 37, 41, 0.95);
+  border: 1px solid #f28c28;
+  border-radius: 14px;
+  color: white;
+}
+
+.toast-custom .toast-header {
+  background: transparent;
+  border-bottom: none;
+  color: #f28c28;
+}
+
+.toast-custom .btn-close {
+  filter: invert(1);
+}
