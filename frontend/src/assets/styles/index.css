@@ -33,71 +33,7 @@ main {
   pointer-events: none;
   overflow: hidden;
 }
-
-.bg-dot {
-  position: absolute;
-  width: 220px;
-  height: 220px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(242, 140, 40, 0.24), transparent 60%);
-  filter: blur(16px);
-  opacity: 0.7;
-  animation: floatDot 18s ease-in-out infinite;
-}
-
-.bg-dot.dot-1 {
-  left: 8%;
-  top: 10%;
-}
-
-.bg-dot.dot-2 {
-  right: 12%;
-  top: 24%;
-  width: 160px;
-  height: 160px;
-  animation-duration: 22s;
-}
-
-.bg-dot.dot-3 {
-  left: 24%;
-  bottom: 6%;
-  width: 180px;
-  height: 180px;
-  animation-duration: 20s;
-}
-
-.bg-line {
-  position: absolute;
-  background: linear-gradient(180deg, rgba(242, 140, 40, 0) 0%, rgba(242, 140, 40, 0.18) 50%, rgba(242, 140, 40, 0) 100%);
-  width: 3px;
-  opacity: 0.42;
-  filter: blur(1px);
-}
-
-.bg-line.line-1 {
-  left: 14%;
-  top: 10%;
-  height: 68%;
-  animation: driftLine 16s linear infinite;
-}
-
-.bg-line.line-2 {
-  right: 14%;
-  top: 6%;
-  height: 78%;
-  animation: driftLine 20s linear infinite reverse;
-}
-
-@keyframes floatDot {
-  0%, 100% { transform: translateY(0) translateX(0); }
-  50% { transform: translateY(-18px) translateX(12px); }
-}
-
-@keyframes driftLine {
-  0% { transform: translateY(0); opacity: 0.45; }
-  50% { transform: translateY(32px); opacity: 0.2; }
-  100% { transform: translateY(0); opacity: 0.45; }
-}
+/* Hero and background styles moved to `futuristic.css` */
 
 .custom-navbar {
   background: rgba(12, 14, 18, 0.95) !important;
@@ -148,6 +84,20 @@ main {
   transition: transform 0.2s ease, background 0.2s ease;
 }
 
+.menu-pill {
+  padding: 0.42rem 0.85rem;
+  min-width: 0;
+  width: auto;
+  font-size: 0.95rem;
+}
+
+.menu-pill > .dropdown-toggle,
+.menu-pill .dropdown-toggle {
+  padding: 0.42rem 0.85rem !important;
+  min-height: 0;
+  line-height: 1.2;
+}
+
 .nav-pill:hover,
 .nav-pill:focus {
   background: rgba(242, 140, 40, 0.12);
@@ -155,151 +105,26 @@ main {
   transform: translateY(-2px);
 }
 
-.hero-panel {
-  position: relative;
-  display: grid;
-  gap: 2rem;
-  grid-template-columns: minmax(320px, 1.1fr) minmax(280px, 0.9fr);
-  align-items: center;
-  padding: 4rem 1.5rem 3rem;
-  margin: 0 auto;
-  max-width: 1200px;
-  z-index: 1;
-}
+/* Hero visuals moved to `futuristic.css` */
 
-.hero-copy {
-  max-width: 620px;
-}
-
-.eyebrow {
-  display: inline-flex;
-  padding: 0.4rem 0.9rem;
-  border-radius: 999px;
-  background: rgba(242, 140, 40, 0.13);
-  color: #ffc46f;
-  font-size: 0.85rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  margin-bottom: 1.2rem;
-}
-
-.hero-copy h1 {
-  font-size: clamp(2.6rem, 4vw, 4.2rem);
-  line-height: 1.02;
-  margin: 0 0 1rem;
-  color: #fff;
-  text-shadow: 0 0 24px rgba(242, 140, 40, 0.22);
-}
-
-.hero-copy p {
-  font-size: 1.05rem;
-  line-height: 1.8;
-  color: #dcd7cd;
-  max-width: 560px;
-  margin-bottom: 2rem;
-}
-
-.hero-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-
-.hero-btn {
-  background: linear-gradient(135deg, #ffb66d, #f28c28);
-  border: none;
-  color: #101010;
-  padding: 0.95rem 1.7rem;
-  font-weight: 700;
-  box-shadow: 0 22px 40px rgba(242, 140, 40, 0.2);
-}
-
-.hero-btn:hover,
-.hero-btn:focus {
-  background: linear-gradient(135deg, #ffd88f, #ff9f42);
-}
-
-.hero-visual {
-  position: relative;
-  min-height: 320px;
-  display: grid;
-  place-items: center;
-}
-
-.hero-bar {
-  position: absolute;
-  bottom: 0;
-  width: 92px;
-  border-radius: 1.75rem;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(26, 26, 26, 0.95));
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
-  backdrop-filter: blur(8px);
-}
-
-.hero-bar-1 { height: 110px; left: 16%; }
-.hero-bar-2 { height: 170px; left: 34%; }
-.hero-bar-3 { height: 235px; left: 54%; }
-.hero-bar-4 { height: 300px; left: 74%; }
-
-.hero-coin {
-  position: absolute;
-  right: 8%;
-  top: 18%;
-  width: 128px;
-  height: 128px;
-  border-radius: 50%;
-  background: radial-gradient(circle at 45% 35%, rgba(255, 221, 147, 0.98), #1f2023 45%);
-  box-shadow: 0 0 35px rgba(242, 140, 40, 0.4), inset 0 0 10px rgba(255, 190, 79, 0.4);
-}
-
-.hero-coin::before {
-  content: '';
-  position: absolute;
-  inset: 12%;
-  border-radius: 50%;
-  border: 2px solid rgba(242, 140, 40, 0.75);
-  box-shadow: 0 0 20px rgba(242, 140, 40, 0.22);
-}
-
-.hero-coin::after {
-  content: '';
-  position: absolute;
-  inset: 32%;
-  border-radius: 50%;
-  background: rgba(0, 0, 0, 0.28);
-}
-
-.card,
 .list-group-item,
 .review h2,
 .btn-outline-secondary {
   border-radius: 22px !important;
 }
 
-.card {
-  background: rgba(16, 18, 21, 0.95) !important;
-  border: 1px solid rgba(242, 140, 40, 0.12) !important;
-  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.25);
-  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-6px);
-  border-color: rgba(242, 140, 40, 0.38) !important;
-  box-shadow: 0 30px 70px rgba(242, 140, 40, 0.16);
-}
+/* card styles moved to cards.css */
 
 .card-text,
-.rating-text,
 table td,
 table th,
 footer,
 .empty-cart,
-.cart-title,
-.product-title {
+.cart-title {
   color: #ece8dd;
 }
 
+/* product-title kept minimal here */
 .product-title {
   font-size: 1.1rem;
   text-decoration: none;
@@ -310,6 +135,28 @@ footer,
   font-weight: 800;
   text-align: center;
   letter-spacing: 0.14em;
+}
+
+.products-black-area {
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  width: 100vw;
+  background: #000;
+  padding: 2rem 0 3rem;
+  margin-top: 1.5rem;
+}
+
+.products-black-inner {
+  max-width: 1260px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.products-black-area .text-muted {
+  color: #c5c2be !important;
 }
 
 .main-container {

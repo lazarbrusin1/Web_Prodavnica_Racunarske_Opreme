@@ -3,7 +3,7 @@ import { Row, Col, ListGroup, Button } from 'react-bootstrap'
 import '../assets/styles/korpa.css'
 
 const CartScreen = () => {
-    const cartItems = JSON.parse(localStorage.getItem('cartItems')) || []
+    const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [] //uzmima proizvode iz localstorage, ako nema proizvoda prazna lista
 
     return (
         <>
@@ -31,12 +31,12 @@ const CartScreen = () => {
                                         variant='danger'
                                         onClick={() => {
                                             const updatedCart = cartItems.filter(
-                                                (x) => x._id !== item._id
+                                                (x) => x._id !== item._id //pravi novu listu proizvoda bez onog koji se brise
                                             )
 
                                             localStorage.setItem(
                                                 'cartItems',
-                                                JSON.stringify(updatedCart)
+                                                JSON.stringify(updatedCart) //cuva novu korpu u localstorage kao string
                                             )
 
                                             window.location.reload()

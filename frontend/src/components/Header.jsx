@@ -1,11 +1,15 @@
 import React from 'react'
-import { Navbar, Container, Nav, Modal, Button, Form, Toast } from 'react-bootstrap'
+import { Navbar, Container, Nav, Modal, Button, Form, Toast, NavDropdown } from 'react-bootstrap'
 import { FaShoppingCart, FaUser } from 'react-icons/fa'
 import logo from '../assets/logo.png'
+import { Link } from 'react-router-dom'
 import { LinkContainer } from 'react-router-bootstrap'
+import products from '../products_list.js'
 import '../assets/styles/prijava.css'
+import '../assets/styles/futuristic.css'
 import { useState } from 'react'
 const Header = () => {
+    const categories = Array.from(new Set(products.map((product) => product.category))).filter(Boolean)
     const [show, setShow] = useState(false)
     const [role, setRole] = useState(localStorage.getItem('role') || '')
     const [selectedRole, setSelectedRole] = useState('Korisnik')
@@ -64,7 +68,19 @@ const Header = () => {
               </LinkContainer>
               <Navbar.Toggle aria-controls="basic-navbar-nav" />
               <Navbar.Collapse id="basic-navbar-nav" className="justify-content-center">
-                <Nav className="header-nav">
+                <Nav className="header-nav align-items-center">
+                  <NavDropdown title="Meni" id="menu-dropdown" className="nav-pill menu-pill nav-dropdown">
+                    <NavDropdown.Item as={Link} to="/">Sve kategorije</NavDropdown.Item>
+                    {categories.map((category) => (
+                      <NavDropdown.Item
+                        as={Link}
+                        key={category}
+                        to={`/?category=${encodeURIComponent(category)}`}
+                      >
+                        {category}
+                      </NavDropdown.Item>
+                    ))}
+                  </NavDropdown>
                   <LinkContainer to="/cart">
                     <Nav.Link className="nav-pill">
                       <FaShoppingCart /> Korpa
@@ -89,7 +105,6 @@ const Header = () => {
 
           <section className="hero-panel">
             <div className="hero-copy">
-              <span className="eyebrow">Futuristički izbor</span>
               <h1>Napredna oprema za moderne kreatore i gejmere</h1>
               <p>Ubrzaj kupovinu sa svemirom inspirisanim interfejsom, narandžastim akcentima i živim animacijama u pozadini.</p>
               <div className="hero-actions">
