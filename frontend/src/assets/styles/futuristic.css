@@ -216,3 +216,39 @@
   background: rgba(242, 140, 40, 0.12);
   color: #ffd66a;
 }
+
+
+.nav-dropdown .dropdown-menu {
+    z-index: 99999 !important;
+    pointer-events: auto !important;
+}
+
+.nav-dropdown .dropdown-item {
+    pointer-events: auto !important;
+    cursor: pointer;
+}
+
+.hero-panel,
+.hero-visual,
+.page-background {
+    pointer-events: none;
+}
+
+.custom-navbar,
+.header-nav,
+.nav-pill,
+.dropdown-menu {
+    pointer-events: auto;
+}
+
+
+.hero-actions {
+    pointer-events: auto !important;
+    position: relative;
+    z-index: 10;
+}
+
+.hero-actions .btn {
+    pointer-events: auto !important;
+    cursor: pointer;
+}
